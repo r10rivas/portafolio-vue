@@ -1,18 +1,20 @@
 <template>
-  <div class="app" id="app">
-    Base Project
+  <div>
+    <Navegation/>
+    <div>Vamos a darle</div>
   </div>
 </template>
 
 <script>
+import Navegation from "./components/Navegation"
 
 export default {
-  name: 'App',
+  name: "App",
+  components: {
+    Navegation
+  }
 }
 </script>
 
-<style scoped>
-  .app {
-    @apply .flex .w-full .h-screen;
-  }
+<style lang="scss" scoped>
 </style>
