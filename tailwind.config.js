@@ -1,3 +1,4 @@
+const primary ='#812435'
 module.exports = {
   theme: {
     minWidth: {
@@ -6,7 +7,13 @@ module.exports = {
       '1/2': '50%',
       '3/4': '75%',
       'full': '100%',
+    },
+    extend: {
+      colors: {
+        primary: primary,
+      }
     }
+    
   },
   variants: {},
   plugins: [],
