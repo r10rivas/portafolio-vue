@@ -15,6 +15,11 @@ module.exports = {
     }
     
   },
-  variants: {},
+  variants: {
+    borderColor: ['responsive', 'hover', 'focus', 'active'],
+    borderWidth: ['responsive', 'hover', 'focus', 'active'],
+    borderStyle: ['responsive', 'hover', 'focus', 'active'],
+    borderRadius: ['responsive', 'hover', 'focus', 'active'],
+  },
   plugins: [],
 }
