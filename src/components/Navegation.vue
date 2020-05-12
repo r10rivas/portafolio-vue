@@ -33,17 +33,21 @@
       @click.prevent="handleSidebar"
     >
     </div>
-    <div
-      class="absolute top-0 w-3/4 h-screen z-20 bg-black hidden sm:hidden"
-      v-bind:class="{sidebarShow: sidebarShow}"
-    >
-      <nav class="py-12 p-10 text-white text-2xl">
-        <ul class="cursor-pointer">
-          <li class="p-4 text-center hover-bg-primary">About</li>
-          <li class="p-4 text-center hover-bg-primary">About</li>
-        </ul>
-      </nav>
-    </div>
+    <!-- Sidebar -->
+    <transition name="fade">
+      <div
+        class="absolute top-0 w-3/4 h-screen z-20 bg-black hidden sidebarShow"
+        v-if="sidebarShow"
+      >
+        <nav class="py-12 p-10 text-white text-2xl">
+          <ul class="cursor-pointer">
+            <li class="p-4 text-center hover-bg-primary">About</li>
+            <li class="p-4 text-center hover-bg-primary">About</li>
+          </ul>
+        </nav>
+      </div>
+    </transition>
+    <!-- Sidebar -->
   </div>
 </template>
 
@@ -64,6 +68,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+
   // Move tailwindcss
   .hover-bg-primary {
     &:hover {
