@@ -10,8 +10,21 @@ module.exports = {
     },
     extend: {
       colors: {
+        app: {
+          'black': '#1B1A1A',
+          'white': '#F3F2F2',
+          'white-darked': '#cdbbc1',
+          'yellow': '#FAE17C',
+          'primary': primary,
+          'primary-darked': '#5C202F',
+          'vinotinto': '#681629'
+
+        },
         primary: primary,
-      }
+      },
+      fontSize: {
+        '7xl': '5rem',
+      },
     }
     
   },
