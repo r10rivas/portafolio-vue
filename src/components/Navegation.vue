@@ -3,21 +3,24 @@
     <!-- Navbar -->
     <header class="flex justify-between items-center w-full py-6 px-8 bg-black">
       <div class="flex items-center w-32 h-20">
-        <img class="w-full h-full" src="./../assets/images/logo.svg" alt="R10Rivas">
+        <img class="w-full h-full" src="./../assets/images/logo-white.svg" alt="R10Rivas">
       </div>
-      <nav class="text-2xl hidden text-primary sm:flex sm:justify-between">
+      <nav class="text-2xl hidden text-white sm:flex sm:justify-between">
         <ul class="flex mx-4 my-2">
-          <li class="flex items-center cursor-pointer px-8 hover:text-white hover:bg-primary">
+          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
             About
           </li>
-          <li class="flex items-center cursor-pointer px-8 hover:text-white hover:bg-primary">
+          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
             Experiences
           </li>
-          <li class="flex items-center cursor-pointer px-8 hover:text-white hover:bg-primary">
+          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
+            Projects
+          </li>
+          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
             Skills
           </li>
         </ul>
-        <button class="mx-4 my-2 py-4 px-8 text-center border rounded-sm border-primary hover:text-white">
+        <button class="mx-4 my-2 py-4 px-8 text-center text-app-primary border rounded-sm border-app-yellow bg-app-yellow hover:text-app-black">
           Resumen
         </button>
       </nav>
@@ -26,9 +29,9 @@
         href="#"
         @click.prevent="handleSidebar"
       >
-        <i class="bg-primary button-sidebar-icon"></i>
-        <i class="bg-primary button-sidebar-icon"></i>
-        <i class="bg-primary button-sidebar-icon"></i>
+        <i class="bg-white button-sidebar-icon"></i>
+        <i class="bg-white button-sidebar-icon"></i>
+        <i class="bg-white button-sidebar-icon"></i>
       </a>
     </header>
     <!-- Navbar -->
