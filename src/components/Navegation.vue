@@ -1,13 +1,16 @@
 <template>
-  <div class="relative">
+  <div class="sticky w-full" v-bind:style="{top: scrollPos}">
     <!-- Navbar -->
-    <header class="flex justify-between items-center w-full py-6 px-8 bg-black">
+    <header class="flex justify-between items-center w-full py-6 px-8 bg-app-black">
       <div class="flex items-center w-32 h-20">
         <img class="w-full h-full" src="./../assets/images/logo-white.svg" alt="R10Rivas">
       </div>
       <nav class="text-2xl hidden text-white sm:flex sm:justify-between">
         <ul class="flex mx-4 my-2">
-          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
+          <li
+            class="flex items-center cursor-pointer px-8 hover:bg-primary"
+            @click.stop.prevent="handleNavegation('about')"
+          >
             About
           </li>
           <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
@@ -51,7 +54,12 @@
       >
         <nav class="py-12 p-10 text-white text-2xl">
           <ul class="cursor-pointer">
-            <li class="p-4 text-center hover:bg-primary">About</li>
+            <li
+              class="p-4 text-center hover:bg-primary"
+              @click.stop.prevent="handleNavegation('about')"
+            >
+              About
+            </li>
             <li class="p-4 text-center hover:bg-primary">Experiences</li>
             <li class="p-4 text-center hover:bg-primary">Skills</li>
           </ul>
@@ -68,11 +76,35 @@ export default {
   data () {
     return {
       sidebarShow: false,
+      scrollPos: 0,
+      prevScrollpos: 0,
     }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleSidebar () {
       this.sidebarShow = !this.sidebarShow;
+    },
+    handleScroll () {
+      const currentScrollPos = window.pageYOffset;
+
+      if (this.prevScrollpos > currentScrollPos) {
+        this.scrollPos = "0px";
+      } else {
+        this.scrollPos = "-80px";
+      }
+
+      this.prevScrollpos = currentScrollPos;
+    },
+    handleNavegation (value) {
+      this.$emit("goTo", value);
+      this.scrollPos = "-80px";
+      this.sidebarShow = false;
     }
   }
 }
