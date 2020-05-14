@@ -1,20 +1,31 @@
 <template>
-  <div class="section p-12 flex items-center bg-app-primary-darked sm:px-20">
-    <div>
-      <H1 class="mb-8 text-2xl text-app-yellow lg:text-3xl">
+  <section class="section p-12 flex items-center justify-center bg-app-primary-darked
+              sm:px-20
+              lg:p-0"
+  >
+    <div class="lg:w-4/5">
+      <H1 class="mb-8 text-2xl text-app-yellow
+                 md:text-3xl
+                 lg:text-4xl">
         Hi, my name is
       </H1>
-      <h2 class="text-app-white text-6xl font-bold lg:text-7xl">
+      <h2 class="text-app-white text-5xl font-bold md:text-6xl lg:text-7xl">
         Roberto Rivas.
       </h2>
-      <h3 class="mb-4 text-6xl font-bold text-app-white-darked lg:text-7xl">
+      <h3 class="mb-4 text-5xl font-bold text-app-white-darked
+                 md:text-6xl
+                 lg:text-7xl"
+      >
         I build things for the web.
       </h3>
-      <p class="mt-10 text-3xl text-app-white-darked lg:w-1/2 lg:text-4xl">
+      <p class="mt-10 text-3xl text-app-white-darked
+                md:text-4xl
+                lg:w-1/2 lg:text-5xl"
+      >
         I'm a web developer residing in Venezuela, specializing in building exceptional applications, and everything in between.
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -24,7 +35,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// todo: class global?
 .section {
-  height: calc(100vh - 8rem);
+  min-height: calc(100vh - 8rem);
 }
 </style>
