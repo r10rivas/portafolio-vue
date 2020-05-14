@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky w-full" v-bind:style="{top: scrollPos}">
+  <div class="sticky w-full z-10" v-bind:style="{top: scrollPos}">
     <!-- Navbar -->
     <header class="flex justify-between items-center w-full py-6 px-8 bg-app-black">
       <div class="flex items-center w-32 h-20">
@@ -28,9 +28,9 @@
         </button>
       </nav>
       <a
-        class="flex flex-col items-center justify-center  w-16 h-16 p-2 sm:hidden active:border active:border-solid active:border-primary active:rounded-sm"
+        class="flex flex-col items-center justify-center w-16 h-16 p-2 sm:hidden active:border active:border-solid active:border-primary active:rounded-sm"
         href="#"
-        @click.prevent="handleSidebar"
+        @click.prevent.stop="handleSidebar"
       >
         <i class="bg-white button-sidebar-icon"></i>
         <i class="bg-white button-sidebar-icon"></i>
@@ -102,9 +102,9 @@ export default {
       this.prevScrollpos = currentScrollPos;
     },
     handleNavegation (value) {
-      this.$emit("goTo", value);
       this.scrollPos = "-80px";
       this.sidebarShow = false;
+      this.$emit("goTo", value);
     }
   }
 }
@@ -112,7 +112,7 @@ export default {
 
 <style lang="scss" scoped>
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
+  transition: opacity .3s
 }
 
 .fade-enter, .fade-leave-to {
