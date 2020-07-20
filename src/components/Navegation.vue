@@ -13,7 +13,9 @@
           >
             About
           </li>
-          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
+          <li class="flex items-center cursor-pointer px-8 hover:bg-primary"
+              @click.stop.prevent="handleNavegation('whereWorked')"
+          >
             Experiences
           </li>
           <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
@@ -60,7 +62,11 @@
             >
               About
             </li>
-            <li class="p-4 text-center hover:bg-primary">Experiences</li>
+            <li class="p-4 text-center hover:bg-primary"
+                @click.stop.prevent="handleNavegation('whereWorked')"
+            >
+              Experiences
+            </li>
             <li class="p-4 text-center hover:bg-primary">Skills</li>
           </ul>
         </nav>
