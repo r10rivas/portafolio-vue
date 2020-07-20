@@ -3,6 +3,7 @@
     <Navegation @goTo="goTo"/>
     <Presentation/>
     <About ref="about"/>
+    <WhereWorked ref="whereWorked"/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Navegation from "./components/Navegation";
 import Presentation from "./components/Presentation";
 import About from "./components/About";
+import WhereWorked from "./components/WhereWorked";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     Navegation,
     Presentation,
     About,
+    WhereWorked,
   },
   methods: {
     goTo (refName) {
