@@ -25,9 +25,13 @@
             Skills
           </li>
         </ul>
-        <button class="mx-4 my-2 py-4 px-8 text-center text-app-primary border rounded-sm border-app-yellow bg-app-yellow hover:text-app-black">
+        <a
+          class="mx-4 my-2 py-4 px-8 text-center text-app-primary border rounded-sm border-app-yellow bg-app-yellow hover:text-app-black"
+          href="https://drive.google.com/file/d/1A6Z5PoNPsOsQ-GxOEkt_VL0nnpEZFIpX/view?usp=sharing"
+          target="_blank"
+        >
           Resumen
-        </button>
+        </a>
       </nav>
       <a
         class="flex flex-col items-center justify-center w-16 h-16 p-2 sm:hidden active:border active:border-solid active:border-primary active:rounded-sm"
@@ -54,7 +58,7 @@
         class="absolute top-0 w-3/4 h-screen z-20 bg-black sm:hidden"
         v-if="sidebarShow"
       >
-        <nav class="py-12 p-10 text-white text-2xl">
+        <nav class="py-12 p-10 flex flex-col text-white text-2xl">
           <ul class="cursor-pointer">
             <li
               class="p-4 text-center hover:bg-primary"
@@ -69,6 +73,13 @@
             </li>
             <li class="p-4 text-center hover:bg-primary">Skills</li>
           </ul>
+          <a
+            class="mx-4 my-2 py-4 px-8 text-center text-app-primary border rounded-sm border-app-yellow bg-app-yellow hover:text-app-black"
+            href="https://drive.google.com/file/d/1A6Z5PoNPsOsQ-GxOEkt_VL0nnpEZFIpX/view?usp=sharing"
+            target="_blank"
+          >
+            Resumen
+          </a>
         </nav>
       </div>
     </transition>
