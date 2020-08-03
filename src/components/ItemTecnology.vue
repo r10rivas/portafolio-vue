@@ -16,6 +16,7 @@ export default {
     @apply w-1/2;
     @apply mb-4 pl-8;
     @apply relative;
+    @apply font-oswald;
 
     &::before {
       content: "▹";
