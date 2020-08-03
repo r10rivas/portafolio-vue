@@ -18,11 +18,10 @@
           >
             Experiences
           </li>
-          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
+          <li class="flex items-center cursor-pointer px-8 hover:bg-primary"
+              @click.stop.prevent="handleNavegation('projects')"
+          >
             Projects
-          </li>
-          <li class="flex items-center cursor-pointer px-8 hover:bg-primary">
-            Skills
           </li>
         </ul>
         <a
@@ -71,7 +70,11 @@
             >
               Experiences
             </li>
-            <li class="p-4 text-center hover:bg-primary">Skills</li>
+            <li class="p-4 text-center hover:bg-primary"
+                @click.stop.prevent="handleNavegation('projects')"
+            >
+              Projects
+            </li>
           </ul>
           <a
             class="mx-4 my-2 py-4 px-8 text-center text-app-primary border rounded-sm border-app-yellow bg-app-yellow hover:text-app-black"

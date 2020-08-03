@@ -8,7 +8,19 @@ module.exports = {
       '3/4': '75%',
       'full': '100%',
     },
+    fontFamily: {
+      'oswald': ['Oswald'],
+    },
     extend: {
+      height: {
+        '72': '18rem',
+        '80': '20rem',
+        '88': '22rem',
+        '96': '24rem',
+        '104': '26rem',
+        '112': '28rem',
+        '120': '30rem'
+      },
       colors: {
         app: {
           'black': '#1B1A1A',
