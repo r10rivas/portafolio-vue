@@ -22,7 +22,7 @@
                 md:text-4xl
                 lg:w-1/2 lg:text-5xl"
       >
-        I'm a web developer residing in Venezuela, specializing in building exceptional applications, and everything in between.
+        I'm a web developer residing in Venezuela. I always like to be learning and build application scalable and maintainable. Lover of good practices.
       </p>
     </div>
   </section>
